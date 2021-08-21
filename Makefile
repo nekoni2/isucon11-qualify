@@ -14,3 +14,6 @@ run: build compose
 
 init:
 	curl -X POST http://localhost:3000/initialize
+
+copy:
+	scp go/isucondition isucon01:/home/isucon/webapp/go/isucondition
