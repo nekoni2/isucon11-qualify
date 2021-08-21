@@ -24,6 +24,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
+	_ "github.com/joho/godotenv/autoload"
 )
 
 const (
