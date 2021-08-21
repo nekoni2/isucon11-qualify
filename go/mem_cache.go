@@ -38,9 +38,9 @@ func getCacheFallback(key interface{}, fallback func() (interface{}, error)) (in
 }
 
 func cacheGetIsuCondition(id string) (*IsuCondition, error) {
-	id = strings.TrimPrefix(id, "isucondition:")
-	data, err := getCacheFallback(cacheKey("chair", id), func() (interface{}, error) {
-		jsonStr, err := redisClient.Get(context.Background(), cacheKey("isucondition", id)).Result()
+	id = strings.TrimPrefix(id, cachePrefixIsuContidion)
+	data, err := getCacheFallback(cachePrefixIsuContidion + id, func() (interface{}, error) {
+		jsonStr, err := redisClient.Get(context.Background(), cachePrefixIsuContidion + id).Result()
 		if err != nil {
 			return nil, err
 		}

@@ -1,4 +1,4 @@
-module github.com/isucon/isucon11-qualify/isucondition
+module isucondition
 
 go 1.16
 
@@ -13,6 +13,7 @@ require (
 	github.com/json-iterator/go v1.1.11
 	github.com/labstack/echo/v4 v4.3.0
 	github.com/labstack/gommon v0.3.0
+	github.com/spf13/cast v1.4.1
 	go.uber.org/zap v1.19.0
 	golang.org/x/crypto v0.0.0-20210513164829-c07d793c2f9a // indirect
 )
