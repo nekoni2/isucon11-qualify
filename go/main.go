@@ -339,6 +339,7 @@ func postInitialize(c echo.Context) error {
 
 // POST /api/auth
 // サインアップ・サインイン
+// [Top Hit API]
 func postAuthentication(c echo.Context) error {
 	reqJwt := strings.TrimPrefix(c.Request().Header.Get("Authorization"), "Bearer ")
 
