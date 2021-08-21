@@ -8,3 +8,6 @@ compose:
 
 run: build compose
 	cd go && ./isucondition
+
+init:
+	curl -X POST http://localhost:3000/initialize
