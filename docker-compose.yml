@@ -2,6 +2,15 @@ version: "3.8"
 
 services: 
 
+  openresty:
+    image: openresty/openresty:alpine
+    volumes: 
+      - "./conf/openresty/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
+      - "./logs/openresty:/usr/local/openresty/nginx/logs"
+      - "./certs:/usr/local/openresty/nginx/certs"
+      - "./public:/www/public"
+    network_mode: host
+
   mysql:
     image: mysql:5.7
     environment:
@@ -16,3 +25,4 @@ services:
     image: redis:6.2
     ports:
       - "6379:6379"
+      

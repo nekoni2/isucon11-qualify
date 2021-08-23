@@ -15,3 +15,8 @@ go/isucondition
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+isucon-official
+
+*.log
+*.pid
