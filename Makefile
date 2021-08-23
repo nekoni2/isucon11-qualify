@@ -15,5 +15,8 @@ run: build compose
 init:
 	curl -X POST http://localhost:3000/initialize
 
+benchmark-setup:
+	git clone https://github.com/isucon/isucon11-qualify.git
+
 copy:
 	scp go/isucondition isucon01:/home/isucon/webapp/go/isucondition
